@@ -3,7 +3,7 @@
 *
 * 1. Implicit Binding - 'this' references the object when you invoke it.
 * 2. Explicit Binding - 'this' references the first argument inside the function.
-* 3. 'new' Binding - 'this references
+* 3. 'new' Binding - 'this' references 'new' when it creates a new object.
 * 4. Window (Lexical) Binding -
 *
 * write out a code example of each explanation above
@@ -39,7 +39,15 @@
 
 
 // Principle 3 ('new' Binding)
+  function supplies (utensil, drink, attack) {
+   this.utensil = utensil
+   this.drink = drink
+   this.attack = attack
+   console.log(`Got my ${this.utensil}, got my ${this.drink}. It's time to ${this.attack} it up!!!`);
+  }
 
+  const me = new supplies('knife', 'slurpee', 'karate chop')
 
+  //In this case, 'this' refers to 'new' when the new function is invoked.
 
 // Principle 4 (Window Binding)
