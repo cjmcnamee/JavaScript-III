@@ -1,26 +1,34 @@
-/* The for principles of "this";
+/* The four principles of "this";
 * in your own words. explain the four principle for the "this" keyword below.
 *
-* 1. 
-* 2. 
-* 3. 
-* 4. 
+* 1. Implicit Binding - 'this' references the object when you invoke it.
+* 2. Explicit Binding - 'this' references the first argument inside the function.
+* 3. 'new' Binding - 'this references'
+* 4. Window Binding -
 *
 * write out a code example of each explanation above
 */
 
-// Principle 1
+// Principle 1 (Impicit Binding)
+  const userProfile = {
+    user: 'funkyboy1999',
+    pass: 1234,
+    favoriteColor: 'purple',
+    speak: function(){
+      console.log(`Greetings, ${this.user}.`);
+    }
+  }
 
-// code example for Window Binding
+  userProfile.speak();
 
-// Principle 2
+  //in this case, 'this' refers to 'userProfile' aka the object.
 
-// code example for Implicit Binding
+// Principle 2 (Explicit Binding)
 
-// Principle 3
 
-// code example for New Binding
 
-// Principle 4
+// Principle 3 ('new' Binding)
 
-// code example for Explicit Binding
+
+
+// Principle 4 (Window Binding)
