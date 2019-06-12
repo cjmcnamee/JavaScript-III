@@ -4,7 +4,7 @@
 * 1. Implicit Binding - 'this' references the object when you invoke it.
 * 2. Explicit Binding - 'this' references the first argument inside the function.
 * 3. 'new' Binding - 'this' references 'new' when it creates a new object.
-* 4. Window (Lexical) Binding -
+* 4. Window Binding - 'this' is refered to the window/console object in a global scope"
 *
 * write out a code example of each explanation above
 */
@@ -51,3 +51,11 @@
   //In this case, 'this' refers to 'new' when the new function is invoked.
 
 // Principle 4 (Window Binding)
+  function saySomething(something) {
+    console.log(this);
+    return something;
+  }
+
+  saySomething("I'm giving up on you.");
+
+  //In this case, 'this' refers to the console object;
