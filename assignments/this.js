@@ -3,8 +3,8 @@
 *
 * 1. Implicit Binding - 'this' references the object when you invoke it.
 * 2. Explicit Binding - 'this' references the first argument inside the function.
-* 3. 'new' Binding - 'this references'
-* 4. Window Binding -
+* 3. 'new' Binding - 'this references
+* 4. Window (Lexical) Binding -
 *
 * write out a code example of each explanation above
 */
@@ -21,10 +21,21 @@
 
   userProfile.speak();
 
-  //in this case, 'this' refers to 'userProfile' aka the object.
+  //In this case, 'this' refers to 'userProfile' aka the object when invoked.
 
 // Principle 2 (Explicit Binding)
+  function whatsUp () {
+    console.log(`What's up, ${this.name}`);
+  }
 
+  const user = {
+    name: 'Theodore Sacramento Lombardi III',
+    age: '???'
+  }
+
+  whatsUp.call(user);
+
+  //In this case, 'this' refers to 'user', which becomes the argument when you invoke the function.
 
 
 // Principle 3 ('new' Binding)
